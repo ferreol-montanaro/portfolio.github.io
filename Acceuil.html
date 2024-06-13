@@ -1,0 +1,235 @@
+
+<!-- 
+  TODO : 
+   Finir contenu 3 pages - Correction de tt les ecritures / 
+   Footer /
+   Aspect technique -> arborecence /
+   Lecteur video , fait avec l'ia , pour en savoir plus ... /
+   responsive/
+   trouver des contacts (mail;linkdin;...)/
+   Position btn clickable menu deroulant/
+   Perf+Verificator/
+   mettre en ligne/
+
+   Paralax  header
+   Double language
+
+  Details : 
+   logo bare de recherche / 
+   overscroll-behavior Bouton UP /
+   CSS tel+tablette / 
+-->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" > <!-- Pour bien gérer le RWD -->
+  <meta name="author" content="Ferreol Montanaro" >
+  <meta name="description" content="Portfolio" >
+  <link rel="icon" href="./Images/portfolio.ico" >
+ </head>
+
+ <body>
+
+ <header>
+   <h1 class="titre"> Portfolio Ferreol Montanaro </h1>
+
+  <nav class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" >
+    <label class="menu__btn" for="menu__toggle">                           
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+       <li><a class="menu__item" href="#">Accueil</a></li>
+       <li><a class="menu__item" href="AspectTechnique.html">Aspect technique</a></li>
+       <li><a class="menu__item" href="ButAnnee1.html">Bilan 1ere année</a></li>
+       <li><a class="menu__item" href="CV.html">Curiculum Vitae</a></li>
+       <li><a class="menu__item" href="MentionsLegales.html">Mentions légales</a></li>
+       <li><a class="menu__item" href="#contacts">Contacts</a></li>
+    </ul>
+  </nav>
+
+   <link rel="stylesheet" type="text/css" href="./CSS/mobile.css" media="(min-width: 200px) and (max-width: 800px)" >
+
+   <link rel="stylesheet" type="text/css" href="./CSS/Style1.css" media="screen and (min-width: 801px) " >
+
+ </header> 
+
+
+  <nav class="lg-menu-container">
+  <ul class="menu lg-menu">
+    <li class="menu-item"><a class="menu-link" href="#">About Me</a>
+      <ul class="sub-menu">
+        <li class="menu-item"><a class="menu-link" href="#PersonalProfile">Personal Profile</a></li>
+        <li class="menu-item"><a class="menu-link" href="#CentreInteret">centre d’intérêt</a></li>
+        <li class="menu-item"><a class="menu-link" href="#ExtrraScolaire">Activités extra-scolaires</a></li>
+        <li class="menu-item"><a class="menu-link" href="#ChoixBUT">Pourquoi choix BUT</a></li>
+      </ul>
+    </li>
+    <li class="menu-item"><a class="menu-link" href="#">Parcours Pré BUT & BUT</a>
+      <ul class="sub-menu">
+        <li class="menu-item"><a class="menu-link" href="#BacProjet">BAC + projet de spécialité</a></li>
+        <li class="menu-item"><a class="menu-link" href="#Filiere">Filière</a></li>
+        <li class="menu-item"><a class="menu-link" href="#BUT">BUT R&T</a></li>
+      </ul>
+    </li>
+  </ul>
+  </nav>
+
+ <section id="first">
+
+   <h2 id="about_me"> About Me </h2>
+
+   <section id="PersonalProfile" class="containerPP">
+    <h3>containerPP</h3>
+
+     <img src="./Images/personalProfile.png" alt="testimg" class="imagePP">
+       <p class="textPP">
+
+        Personal Profile :
+        <br>
+        <br>
+        I’m Ferreol MONTANARO, 18 years old and currently live in Toulouse even though I’m from the Auvergne Rhone Alpe region. Since the beginning of this year, I’m following a BUT which is a french degree in the technological field. The one I’m following is specialized in networks and telecommunication at the IUT of Blagnac right next to Toulouse.
+        <br>
+        <br>
+        My choice for these particular studies matches my personal interests, indeed, I’m particularly interested in new technologies and am a space and engineering innovation enthusiast as well. Not to mention that I also enjoy traveling a lot and practice sports. Both of those activities make me an openminded and sociable person. Furthermore, the discovery and interest toward foreign culture in addition to sportsmanship make me able to work with a diversified team in my personal or professional project.
+
+        <br>
+        <br>
+        To conclude, I’d like to bring then attention on a quote I’ve found while watching the show Rick and Morty. It is “Sometimes science is more art than science.”. Which in my opinion represents the fact that science is above complex algebra or people in white scientist blouses, it is a way to communicate and to make humanity go forward.
+       </p>
+   </section>
+
+
+   <section id="CentreInteret" class="containerG">
+    <h3>centre d’intérêt</h3>
+
+     <img src="./Images/CentreInteret.png" alt="testimg" class="imageG">
+       <p class="textG">
+
+        In my free time, I enjoy spending time using Virtual Reality. It can be either to play video games or to discover what this futuristic piece of tech can offer us.
+        Indeed, VR is a relatively new technology. It’s only been a few years since those impressive headset are easily find-able by any potential user thanks to the industrialization of this hardware.
+        I also particularity enjoy learning and discovering the future innovation in this industry by always staying informed on the subject. 
+
+       </p>
+   </section>
+
+   <section>
+    <h3>video</h3>
+
+      <video width="512" height="512" controls autoplay muted>
+        <source src="./Videos/video.mp4" type="video/mp4">
+      Oups, votre navigateur n'est pas compatible
+      </video>
+
+      <p class="legende">
+        This animation as been made by an A.I. thanks to one sentence only.<br>
+        <br>
+        Indeed, this A.I. developed by OpenAI is capable of “imagining “ an animation from a sentence given by the user such as “futuristic world cloud city“ in this example.<br>
+
+        <a href="https://colab.research.google.com/drive/1_MckQnU0mCF8FJ7PoV21nhVvoOeotHGy" target="_blank"> Learn more ... </a>
+      </p>
+
+   </section>
+
+
+   <section id="ExtrraScolaire" class="container">
+    <h3>ExtrraScolaire</h3>
+
+     <img src="./Images/activiteExtraSco.png" alt="testimg" class="image">
+       <p class="text">
+        Activités extra-scolaires :
+
+        Outside of school and in general of the Tech world, I practice parkour. It is a sport based on the “art of movement.” The objective of this sport is to go from a point A to a point B either as fast as possible or with the most stylish and impressive figure. I also enjoy skateboarding, mainly to travel for short distance.
+
+       </p>
+   </section>
+
+   <section id="ChoixBUT" class="containerG">
+    <h3>ChoixBUT</h3>
+
+     <img src="./Images/ChoixBUT.png" alt="testimg" class="imageG">
+       <p class="textG">
+        I've chosen to start my studies in a BUT R&T because computer science as always been a really interesting subject to me. Furthermore, the R&T Department give the opportunity to learn about Cybersecurity which is in my opinion offer a particularly fascinating field of knowledge. 
+       </p>
+   </section>
+
+ </section>
+
+
+ <section id="second">
+
+  <h2 id="ParcourPreBUT"> Parcours Pré BUT & BUT </h2>
+
+
+
+   <section id="BacProjet" class="container">
+    <h3>BacProjet</h3>
+
+     <img src="./Images/bacSpe.png" alt="testimg" class="image">
+       <p class="text">
+        BAC + projet de spécialité : <br>
+        <br>
+        En 2022, j’ai obtenue mon baccalauréat avec mention Bien en filière Général avec les options présenté dans <a href="#Filiere">Filiére</a>
+
+       </p>
+   </section>
+
+
+   <section id="Filiere" class="containerG">
+    <h3>Filiere</h3>
+
+     <img src="./Images/filiere.png" alt="testimg" class="imageG">
+       <p class="textG">
+
+        En classe de 2nd, j’ai décidé de choisir les Spécialités d’enseignement suivantes pour la suite de mes études : 
+        <br>
+        <br>
+        - Science de l’ingénieur – Choisi pour les compétences potentielles permettant de comprendre la manière dont fonctionnes les objets qui nous entoure et plus particulièrement ce composant les technologies maintenant étudiées lors de mes études supérieurs. 
+        <br>
+        <br>
+        - Numérique Science Informatique – Choisie pour renforcer mes compétences personnelles en Algorithmique et concernant différent langage de programmation
+        <br>
+        <br>
+        - Spécialité Anglais – Choisie pour obtenir une certification Bilingue pour favoriser le travail avec des équipes diversifié voir à l'étranger. 
+
+       </p>
+   </section>
+
+
+  <section id="BUT" class="container">
+    <h3>BUT R&T </h3>
+
+      <img src="./Images/butRT.png" alt="testimg" class="image">
+       <p class="text">
+        BUT R&T : mes attentes / ma vision :
+
+        Mes attentes et plus exactement mes objectifs durant ce BUT R&T
+        sont d’acquérir autant de compétence possible dans le domaine de la cybersécurité en particulier, mais aussi dans tous les domaines se rapprochant de près ou de loin à internet et au réseau d’ordinateur, car je pense qu’il est indispensable d’avoir une vue d’ensemble sur ces sujets pour comprendre le monde dans lequel nous vivons, mais aussi pour pouvoir s’y développer sans difficulté. 
+
+       </p>
+   </section>
+
+ </section>
+
+
+ <footer id="contacts">
+    
+   <a href="mailto:ferreol.montanaro.iut@gmail.com"> <img src="./Images/mail.png" alt="testimg"> </a>
+   <p id="contacts"> Contacts </p>
+   <a href="https://www.linkedin.com/in/ferreol-montanaro-556128257" target="_blank"> <img src="./Images/linkedin.png" alt="testimg"> </a>
+
+ </footer>
+
+
+ </body>
+
+
+
+
+
+</html>

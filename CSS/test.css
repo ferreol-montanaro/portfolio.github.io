@@ -1,0 +1,381 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: relative; 
+  margin: 4%;
+  padding: 0; 
+  top: 9%;
+  background-color: #0F1718 ;
+  color: #BBC5C5 ;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0; 
+  width: 100%; 
+  height: 9%;
+  background-color: #236467;
+  color : #BBC5C5;
+  left: 0;
+  border-radius: 15px;
+}
+
+.titre { 
+  text-align: center;
+  font-size: 200%;
+}
+
+h2 { 
+  text-align: center;
+}
+
+h3 {
+  display: none;
+}
+
+#first {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+#second {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6%;
+}
+
+.sectionAT {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.sectionAT img {
+  width: 600px;
+}
+
+@media screen and (max-width : 800px) {
+  .sectionAT img {
+    width: 350px;
+  }
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #236467;            
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+}
+
+
+/* ------------------------------------ Menu deroulant ----------------------------------- */
+
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+
+.menu__btn {
+  position: fixed;
+  z-index: 2;
+  top: 33px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 20%;
+  margin: 0;
+  padding: 80px 0;
+  background-color: #01C5CE;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+  opacity: .8;
+  border-radius: 15px;
+}
+
+.menu__item {
+  display: block;
+  z-index: 2;
+  padding: 12px 24px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+
+
+/* -------------------------------------Menu horizontal-------------------------------------- */
+
+.menu {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.menu:before,
+.menu:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.lg-menu-container {
+  display: flex;
+  position: fixed;
+  z-index: 2;
+  height: 4%;
+  background-color:#01C5CE;                                        /* TODO : bouton + bare d'état (pour savoir ou on est); */
+  top: 9%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.7;
+  border-radius: 15px;
+}
+
+.lg-menu-container .lg-menu {
+  padding: 0 0 0 80px;
+}
+
+.responsive-menu-container {
+  position: relative;
+  float: right;
+}
+
+.menu > .menu-item {
+  float: left;
+  margin-right: 50px;
+  height: 30px;
+}
+
+.menu .menu-link {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  text-decoration: none;
+}
+
+.menu .menu-item:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 40px;
+  list-style: none;
+  background-color: #01C5CE;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .5);
+  padding: 0;
+  width: 125px;
+  opacity: 0.8;
+}
+
+.sub-menu:before,
+.sub-menu:after {
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: 10px solid transparent;
+}
+
+.sub-menu .menu-link {
+  display: block;
+  padding: 5px 10px;
+  color: #000;
+}
+
+.sub-menu .menu-item:hover {
+  background-color: #aaaaaa;
+}
+
+
+/* -------------------------------------Affichage Paragraphe-------------------------------------- */
+
+
+/* ---------------Personal Profile----------------- */
+
+.containerPP {
+  height: auto;
+  min-height: 800px;
+  width: 50%;
+}
+
+.imagePP {
+  width: 80%;
+}
+
+.textPP {
+  display: none;
+  font-size: 1.2vw;
+}
+
+.containerPP:hover .imagePP {
+  display: none;
+}
+
+.containerPP:hover .textPP {
+  display: block;
+}
+
+
+
+/* ------------------------Gauche------------------------ */
+
+
+.container {
+  height: auto;
+  min-height: 400px;
+  width: 50%;
+}
+
+.image {
+  width: 80%;
+}
+
+.text {
+  display: none;
+  font-size: 1.2vw;
+}
+
+.container:hover .image {
+  display: none;
+}
+
+.container:hover .text {
+  display: block;
+}
+
+/* ------------------------Droite------------------------ */                        
+
+.containerG {
+  height: auto;
+  min-height: 600px;
+  margin-left: 60%;
+}
+
+.imageG {
+  width: 80%;
+}
+
+.textG {
+  display: none;
+  font-size: 1.2vw;
+}
+
+.containerG:hover .imageG {
+  display: none;
+}
+
+.containerG:hover .textG {
+  display: block;
+}
+
+/* ------------------------------------------- Video --------------------------------------------- */
+
+
+video {
+  width: 55%;
+  height: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 25px;
+}
+
+.legende {
+  font-size: 115%;
+  padding-left: 25px;
+  max-inline-size: 50%;
+}
+
+
+
+
+/* --------------------------------------------------------------- Aspect Technique ----------------------------------------------------------------- */
+
+
+
+.imgTech {
+  display: block;
+  width: 70%;
+  height: auto;
+  padding: 7%;
+}
+
+
+/* --------------------------------------------------------------- Mention Legales ----------------------------------------------------------------- */
+.mentionLegales p {
+  font-size: 25px;
+}
+
+.mentionLegales {
+  margin-bottom: 200px;
+}
+
